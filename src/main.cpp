@@ -15,6 +15,9 @@ void loop() {
    Serial.print(maLectureAnalogique);
    Serial.println();
    delay(100);
+   int red = maLectureAnalogique * 255 / 4095;
+   monPixel = CRGB(red,0,0);
+   FastLED.show();
 
    /*if (maLectureAnalogique < 2080){
     monPixel = CRGB (0, 0, 0);
